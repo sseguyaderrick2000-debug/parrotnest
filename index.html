@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parrot Nest Pictures Ltd</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+        integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="./CSS/styles.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="top-bar">
+            <div class="container top-bar-container">
+                <div>
+                    <span><i class="fas fa-envelope"></i> parrotnestpictures@gmail.com</span>
+                    <span><i class="fas fa-phone"></i> +256 759 745 502</span>
+                </div>
+                <div>
+                    <div class="top-bar-btns">
+                        <button class="btn btn-contact">Contact us</button>
+                        <button class="btn btn-download"><i class="fas fa-download"></i> Download Brochure</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav class="navbar">
+        <div class="container navbar-container">
+            <a href="#" class="logo">
+                <img src="./images/logo2.png" alt="Parrot Nest Pictures Logo">
+                <div class="logo-text">
+                    Parrot<span class="highlight">Nest Pictures</span>
+                </div>
+            </a>
+            <ul class="nav-items">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="ourteam.html">OurTeam</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+
+
+    <section class="hero-section">
+        <div class="owl-carousel owl-theme">
+            <!-- First slide -->
+            <div class="hero-slide slide1">
+                <img src="./images/slide-1.jpg" alt="Parrot Nest Pictures">
+                <div class="hero-content">
+                    <h1>Welcome to Parrot Nest Pictures</h1>
+                    <p>The Home of Ugandan Entertainment</p>
+                    <a href="http://www.youtube.com/@parrotnestpicturesltd" target="_blank" rel="noopener noreferrer"
+                        class="btn">
+                        <button class="btn">Explore Our projects</button>
+                    </a>
+                </div>
+            </div>
+            <!-- Second slide -->
+            <div class="hero-slide slide2">
+                <img src="./images/slide-2.JPG" alt="African Stories">
+                <div class="hero-content">
+                    <h1>Enjoy African Stories</h1>
+                    <p>The Home of Ugandan Entertainment</p>
+                    <a href="http://www.youtube.com/@parrotnestpicturesltd" target="_blank" rel="noopener noreferrer"
+                        class="btn">
+                        <button class="btn">Explore Our projects</button>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Third slide -->
+            <div class="hero-slide slide3">
+                <img src="./images/slide-3.JPG" alt="Join our Community">
+                <div class="hero-content">
+                    <h1>Join our Community</h1>
+                    <p>Be part of us, Be a Star</p>
+                    <a href="contact.html" target="_blank" rel="noopener noreferrer"
+                        class="btn">
+                        <button class="btn">Contact us Now</button>
+                    </a>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navItems = document.querySelector('.nav-items');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navItems.classList.toggle('active');
+            const icon = mobileMenuBtn.querySelector('i');
+            if (navItems.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        $(document).ready(function () {
+            $('.owl-carousel').owlCarousel({
+                loop: true,
+                margin: 0,
+                dots: false,
+                nav: true,
+                autoplay: true,
+                autoplayTimeout: 5000,
+                autoplayHoverPause: true,
+                responsive: {
+                    0: { items: 1 },
+                    768: { items: 1 },
+                    1000: { items: 1 }
+                }
+            });
+        });
+    </script>
+
+    <footer class="footer">
+
+        <div class="footer-logo">
+            PARROT NEST PICTURES LTD
+        </div>
+
+        <p>
+            Telling stories. Creating memories.
+            Inspiring generations.
+        </p>
+
+        <div class="footer-bottom">
+            &copy; 2026 Parrot Nest Pictures Ltd.
+            All Rights Reserved.
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
